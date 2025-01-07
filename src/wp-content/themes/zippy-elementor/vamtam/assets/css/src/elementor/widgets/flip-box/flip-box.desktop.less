@@ -1,0 +1,44 @@
+// Flip Box - Desktop.
+.elementor-widget-flip-box {
+	// Base Theme Widget Styles.
+	&.vamtam-has-theme-widget-styles {
+		@media (pointer:fine) {
+			// 	Slide Bg Anim.
+			&.elementor-flip-box--effect-vamtam-slide-bg {
+				.elementor-flip-box__layer.elementor-flip-box__back {
+					top: 0;
+					left: 0;
+					transition: clip-path .57s cubic-bezier(.62,.83,.34,.93);
+				}
+				&.elementor-flip-box--direction- {
+					&left {
+						.elementor-flip-box__layer.elementor-flip-box__back {
+							clip-path: inset(0 100% 0 0);
+						}
+					}
+					&right {
+						.elementor-flip-box__layer.elementor-flip-box__back {
+							clip-path: inset(0 0 0 100%);
+						}
+					}
+					&up {
+						.elementor-flip-box__layer.elementor-flip-box__back {
+							clip-path: inset(100% 0 0 0);
+						}
+					}
+					&down {
+						.elementor-flip-box__layer.elementor-flip-box__back {
+							clip-path: inset(0 0 100% 0);
+						}
+					}
+				}
+
+				&:hover {
+					.elementor-flip-box__layer.elementor-flip-box__back {
+						clip-path: inset(0 0 0 0);
+					}
+				}
+			}
+		}
+	}
+}
